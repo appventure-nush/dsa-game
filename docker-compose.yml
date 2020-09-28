@@ -1,0 +1,21 @@
+version: 2
+
+networks:
+  primary:
+    external:
+      name: primary
+
+services:
+  web:
+    image: registry.nush.app/dsa-game:latest
+    restart: always
+    networks:
+    - primary
+    expose:
+    - "5000"
+    labels:
+    - "traefik.enable=true"
+    - "traefik.http.routers.dsagame.rule=Host(`dsa.nush.app`)"
+    - "traefik.http.routers.dsagame.entrypoints=https"
+    - "traefik.http.routers.dsagame.tls=true"
+    - "traefik.http.routers.dsagame.tls.certresolver=tlsresolver"
