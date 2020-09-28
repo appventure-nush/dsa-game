@@ -1,31 +1,75 @@
 import React from 'react';
 // import GamePage from './GamePage';
-import Grid from '@material-ui/core/Grid';
-import { CssBaseline, Typography } from '@material-ui/core';
+import { Typography, Grid, CssBaseline, Button, Hidden } from '@material-ui/core';
+import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      flexGrow: 1,
+      overflow: 'hidden',
+    },
+    code: {
+      background: '#000000',
+      color: '#ffffff',
+      fontFamily: 'Consolas',
+      fontSize: '21px',
+      fontStyle: 'normal',
+      fontWeight: 400,
+      lineHeight: '30px',
+      display: 'inline-block',
+      padding: theme.spacing(1, 1),
+      margin: theme.spacing(1, 0)
+    },
+    container: {
+      background: '#009a90',
+      color: '#ffffff',
+      padding: theme.spacing(5, 0),
+    },
+    button: {
+      margin: theme.spacing(1, 0)
+    }
+  }),
+);
 
 const App: React.FC = () => {
+  const classes = useStyles();
   return (
     <>
-      <CssBaseline />
-      <Grid container justify='center' alignItems='center' style={{height: '100vh'}}>
-        {/* <Grid item xs={8}>
-          <Container>
-            <GamePage />
-          </Container>
-        </Grid> */}
-        <Grid item xs={8}>
-          <Typography style={{wordWrap: 'break-word'}}>
-            <code>
-              import joinnush <br/>
-              turtle.experiment(python) <br/>
-              turtle.explore(programming) <br/>
-              turtle.excel(CS) <br/>
-            </code>
-            Learn to command your very own digital turtle with the Python programming language. you will find out more about computer science; learn how to use Python to create graphics involving shapes, patterns and text.More importantly, you will learn some fundamental programming concepts such as variables, functions and iterations. <br/>
-            Wow your friends with your amazing animations and your new found "superpower"!
+    <CssBaseline />
+    <Grid container className={classes.root} spacing={0}>
+      <Grid item container xs sm className={classes.container} justify='center' alignItems='stretch' alignContent='center'>
+        <Grid item xs={10}>
+          <Typography variant='h2'>
+            NUS High School <br />
+            DSA Preview
           </Typography>
         </Grid>
+        <Grid item xs={10}>
+        <Typography className={classes.code}>
+          import joinnush <br/>
+          turtle.experiment(python) <br/>
+          turtle.explore(programming) <br/>
+          turtle.excel(CS)
+        </Typography>
+        </Grid>
+        <Grid item xs={10}>
+        <Typography variant='body1'>
+          In the near future, the Worldwide Information Security and Engineering Research organisation is the world's protection against the dark threat of cyber terrorism.  Only the most elite computer scientists could dream of playing a part in safeguarding software and data all over the world. But one day, a hacker successfully breached WISER's firewalls, damaged their servers and ravaged their modules. Only you, an agent of computer science, can put a stop to the hacker's schemes and save WISER and all who depend on it.
+        </Typography>
+        </Grid>
+        <Grid item xs={10}>
+        <Button variant='contained' size='large' className={classes.button}>
+          Coming on 9th October!
+        </Button>
+        </Grid>
       </Grid>
+      <Hidden smDown>
+      <Grid item xs={12} sm={6} style={{height: '100vh'}}>
+
+      </Grid>
+      </Hidden>
+    </Grid>
     </>
   );
 };
