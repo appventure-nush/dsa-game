@@ -77,6 +77,7 @@ const DescriptionSubpage: React.FC = () => {
             Brought to you by:
           </Typography>
         </Grid>
+        <br />
         <Grid item>
           <a href='https://nushigh.edu.sg'>
             <img height='60em' src='nush_logo.png' alt='nush logo'/>
