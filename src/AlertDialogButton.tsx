@@ -8,7 +8,14 @@ import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     button: {
-      margin: theme.spacing(1, 0)
+      margin: theme.spacing(1, 0),
+      background: '#fadb14',
+      '&:hover': {
+        background: '#ffec3d'
+      },
+      '&:active': {
+        background: '#d4b106'
+      }
     }
   }),
 );
@@ -27,18 +34,16 @@ const AlertDialogButton: React.FC = props => {
 
   return (
     <div>
-      <Button variant="contained" onClick={handleClickOpen} className={classes.button}>
+      <Button variant="contained" size='large' onClick={handleClickOpen} className={classes.button}>
         {props.children}
       </Button>
       <Dialog
         open={open}
         onClose={handleClose}
-        aria-labelledby="alert-dialog-title"
-        aria-describedby="alert-dialog-description"
       >
-        <DialogTitle>Comming soon on 9th October!</DialogTitle>
+        <DialogTitle>Coming soon on 9th October!</DialogTitle>
         <DialogActions>
-          <Button onClick={handleClose} color="primary">
+          <Button onClick={handleClose}>
             Ok
           </Button>
         </DialogActions>

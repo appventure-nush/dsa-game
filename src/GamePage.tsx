@@ -8,7 +8,9 @@ const GamePage: React.FC = () => {
   ));
 
   return (
-    <Unity unityContent={unityContent} />
+    <div style={{height: '100vh'}}>
+      <Unity unityContent={unityContent} />
+    </div>
   );
 };
 
