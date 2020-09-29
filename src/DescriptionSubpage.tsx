@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Grid, Hidden } from '@material-ui/core';
+import { Typography, Grid, Hidden, CssBaseline } from '@material-ui/core';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
 import AlertDialog from './AlertDialogButton';
 import CarouselSubpage from './CarouselSubPage';
@@ -21,7 +21,10 @@ const useStyles = makeStyles((theme: Theme) =>
     container: {
       background: '#009a90',
       color: '#ffffff',
-      padding: theme.spacing(5, 0)
+      padding: theme.spacing(10, 0),
+      height: '100vh',
+      overflowY: 'auto',
+      overflowX: 'hidden'
     },
     credits: {
       marginTop: '25px'
@@ -32,7 +35,9 @@ const useStyles = makeStyles((theme: Theme) =>
 const DescriptionSubpage: React.FC = () => {
   const classes = useStyles();
   return (
-    <Grid item container xs sm className={classes.container} justify='center' alignItems='stretch' alignContent='center' spacing={1}>
+    <>
+    <CssBaseline />
+    <Grid item container xs sm className={classes.container} justify='center' alignItems='stretch' alignContent='flex-start'>
       <Grid item xs={10}>
         <Typography variant='h3' style={{color: '#fff'}}>
           NUS High School <br />
@@ -40,7 +45,7 @@ const DescriptionSubpage: React.FC = () => {
           (Computer Science)
         </Typography>
       </Grid>
-      <Hidden smUp>
+      <Hidden mdUp>
         <Grid item xs={11}>
           <CarouselSubpage constraintByWidth/>
         </Grid>
@@ -77,6 +82,7 @@ const DescriptionSubpage: React.FC = () => {
         </Typography>
       </Grid>
     </Grid>
+    </>
   );
 };
 

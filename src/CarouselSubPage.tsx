@@ -32,7 +32,7 @@ const CarouselSubpage: React.FC<OwnProps> = props => {
     'carouselImages/NUSH4.png'
   ]
   return (
-    <Grid item xs={12} sm={8}>
+    <Grid item xs={12} md={6} lg={7}>
       <Carousel autoplay dots={false} effect='fade' className={classes.carousel}>
         {images.map((item, i) =>
           <img key={i} alt={`CarouselImage${i}`} src={item} className={props.constraintByWidth ? classes.imageByWidth : classes.imageByHeight} />
