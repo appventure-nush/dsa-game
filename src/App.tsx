@@ -1,7 +1,8 @@
 import React from 'react';
 // import GamePage from './GamePage';
-import { Typography, Grid, CssBaseline, Button, Hidden } from '@material-ui/core';
+import { Typography, Grid, CssBaseline, Hidden } from '@material-ui/core';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
+import AlertDialog from './AlertDialogButton';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -25,9 +26,6 @@ const useStyles = makeStyles((theme: Theme) =>
       background: '#009a90',
       color: '#ffffff',
       padding: theme.spacing(5, 0),
-    },
-    button: {
-      margin: theme.spacing(1, 0)
     }
   }),
 );
@@ -59,9 +57,9 @@ const App: React.FC = () => {
         </Typography>
         </Grid>
         <Grid item xs={10}>
-        <Button variant='contained' size='large' className={classes.button}>
-          Coming on 9th October!
-        </Button>
+        <AlertDialog>
+          Click to save Wiser!
+        </AlertDialog>
         </Grid>
       </Grid>
       <Hidden smDown>
