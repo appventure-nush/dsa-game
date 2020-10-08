@@ -4,6 +4,7 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles';
+import { useHistory } from 'react-router';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -22,10 +23,13 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const AlertDialogButton: React.FC = props => {
   const classes = useStyles();
+  const history = useHistory();
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
-    setOpen(true);
+    // Disabled dialog
+    // setOpen(true);
+    history.push('/game');
   };
 
   const handleClose = () => {
