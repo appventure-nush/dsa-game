@@ -10,10 +10,10 @@ const App: React.FC = () => {
     <BrowserRouter>
       <CssBaseline />
         <Switch>
-          <Route exact path='/staging-game'>
+          <Route exact path='/game'>
             <GamePage />
           </Route>
-          <Route exact path='/staging-lab'>
+          <Route exact path='/lab'>
             <LabPage />
           </Route>
           <Route path='/'>

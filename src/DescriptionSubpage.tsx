@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
     container: {
       background: '#009a90',
       color: '#ffffff',
-      padding: theme.spacing(10, 0),
+      padding: theme.spacing(5, 0),
       height: '100vh',
       overflowY: 'auto',
       overflowX: 'hidden'
