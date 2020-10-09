@@ -19,14 +19,14 @@ const LabPage: React.FC = () => {
         </Grid>
         <Grid item xs={12} md={4}>
           <iframe
-            title='lab msform'
+            title='lab gform'
             width="100%"
             height="100%"
-            src= "https://forms.office.com/Pages/ResponsePage.aspx?id=cnEq1_jViUiahddCR1FZKhEUS5ZmfGBGse1qYbbxQcBUNzM1N0VCRFhVUllaVzNZN0owWFBRWU81TS4u&embed=true"
+            src= "https://docs.google.com/forms/d/e/1FAIpQLSfiprEP9f5MuVQhP04_t6nnmtoxgH9eRw-R7_gyqjXElHyuMw/viewform?embedded=true"
             frameBorder="0"
             marginWidth={0}
             marginHeight={0}
-            style={{border: 'none', maxWidth: '100%', maxHeight: '100vh'}}
+            style={{border: 'none', maxWidth: '100%', maxHeight: '100vh', minHeight: '100vh'}}
             allowFullScreen />
         </Grid>
       </Grid>
