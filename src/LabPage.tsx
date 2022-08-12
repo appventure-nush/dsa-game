@@ -22,7 +22,7 @@ const LabPage: React.FC = () => {
             title='lab MS Form'
             width="100%"
             height="100%"
-            src= "https://forms.office.com/pages/responsepage.aspx?id=cnEq1_jViUiahddCR1FZKpXBzd6LjCtLi_zpgGh6TuVUNjVRTElJTEM1ME1CSEo5SUlRQlJFOUpOSSQlQCNjPTEu?embed=true"
+            src= "https://forms.office.com/pages/responsepage.aspx?id=cnEq1_jViUiahddCR1FZKpXBzd6LjCtLi_zpgGh6TuVUNjVRTElJTEM1ME1CSEo5SUlRQlJFOUpOSSQlQCNjPTEu"
             frameBorder="0"
             marginWidth={0}
             marginHeight={0}
